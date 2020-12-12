@@ -7,9 +7,9 @@ RUN apt install htop -y
 RUN apt install default-jre -y
 RUN apt install default-jdk -y
 
-WORKDIR /home/rmi
-ADD . /home/rmi
+WORKDIR /home/chess
+ADD ./Server /home/chess
 EXPOSE 80
 
 ENTRYPOINT [ "javac" ]
-CMD ["-version"]
+CMD ["-cp . /Server/*java"]
