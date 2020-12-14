@@ -8,8 +8,8 @@ RUN apt install default-jre -y
 RUN apt install default-jdk -y
 
 WORKDIR /home/chess
-ADD ./Server /home/chess
-EXPOSE 80
+ADD ./Source/Server /home/chess
+EXPOSE 4200:4200 4201:4201 4202:4202
 
 ENTRYPOINT [ "javac" ]
 CMD ["-cp . /Server/*java"]
