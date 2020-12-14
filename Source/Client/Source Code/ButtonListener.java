@@ -8,7 +8,10 @@ public class ButtonListener implements ActionListener
 	public void actionPerformed(ActionEvent e) 
 	{
 		//for SessionFrame
-		
+		if(e.getSource() == SessionFrame.game1JoinButton)
+		{	
+			ChessClient.gameSessionSelected = 0;
+		}
 		if(e.getSource() == SessionFrame.game2JoinButton)
 		{	
 			ChessClient.gameSessionSelected = 1;
