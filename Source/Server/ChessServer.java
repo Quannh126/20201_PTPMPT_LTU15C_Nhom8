@@ -2,8 +2,6 @@ import java.rmi.registry.*;
 
 public class ChessServer {
 
-    private static final long serialVersionUID = 1L;
-
     public static void main(String[] args) {
 
         if (hostGames()) {
