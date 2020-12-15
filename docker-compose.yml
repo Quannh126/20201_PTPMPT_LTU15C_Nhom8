@@ -1,0 +1,15 @@
+version: "3"
+
+#service
+services: 
+  chess-server:
+    container_name: chess
+    build: 
+      dockerfile: Dockerfile
+      context: ./
+    ports:
+      - "4200-4202:4200-4202"
+    tty: true
+    stdin_open: true
+    # command: ["/bin/bash","javac", "-cp", ".","./*.java"]
+    # command: ["/bin/bash", "java", "-cp", ".", "ChessServer"]
