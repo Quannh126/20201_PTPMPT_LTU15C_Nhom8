@@ -28,11 +28,11 @@ public class ChessServer {
             // registry = LocateRegistry.getRegistry();
 
             // Start up the registries
-            registry1 = LocateRegistry.createRegistry(4300);
+            registry1 = LocateRegistry.createRegistry(4200);
             System.out.println("registry1 created at port 4200");
-            registry2 = LocateRegistry.createRegistry(4301);
+            registry2 = LocateRegistry.createRegistry(4201);
             System.out.println("registry2 created at port 4201");
-            registry3 = LocateRegistry.createRegistry(4302);
+            registry3 = LocateRegistry.createRegistry(4202);
             System.out.println("registry2 created at port 4202");
 
             // Bind each Session with a registry and give it a name
