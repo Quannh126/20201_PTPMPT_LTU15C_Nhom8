@@ -1,15 +1,10 @@
-FROM ubuntu:latest  
+FROM java:latest  
 
+WORKDIR /home/server
 
-RUN apt update -y
-RUN apt install vim -y
-RUN apt install htop -y
-RUN apt install default-jre -y
-RUN apt install default-jdk -y
+ADD ./Source/Server/ /home/server
 
-WORKDIR /home/chess
-ADD ./Source/Server /home/chess
-EXPOSE 4200:4200 4201:4201 4202:4202
+RUN javac -cp . ./*.java
 
-ENTRYPOINT [ "javac" ]
-CMD ["-cp . /Server/*java"]
+ENTRYPOINT [ "java" ]
+CMD [ "-cp",".","ChessServer" ]
