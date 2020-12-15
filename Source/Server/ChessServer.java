@@ -1,5 +1,3 @@
-package Source.Server;
-
 import java.rmi.registry.*;
 
 public class ChessServer {

@@ -1,4 +1,3 @@
-package Source.Server;
 
 import java.rmi.*;
 
